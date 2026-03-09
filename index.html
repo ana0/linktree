@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Links</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #0f0f0f;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 48px 16px 64px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* ── Profile ── */
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .profile-photo {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #333;
+    }
+
+    .profile-photo-placeholder {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: #222;
+      border: 2px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      color: #555;
+    }
+
+    .profile-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .profile-desc {
+      font-size: 0.875rem;
+      color: #888;
+      max-width: 320px;
+      line-height: 1.5;
+    }
+
+    /* ── Link cards ── */
+    .link-card {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 14px;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s, border-color 0.15s, transform 0.1s;
+    }
+
+    .link-card:hover {
+      background: #222;
+      border-color: #3a3a3a;
+      transform: translateY(-1px);
+    }
+
+    .link-card:active {
+      transform: translateY(0);
+    }
+
+    .link-thumb {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: #2a2a2a;
+    }
+
+    .link-thumb-placeholder {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: #2a2a2a;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .link-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .link-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .link-desc {
+      font-size: 0.78rem;
+      color: #777;
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .link-arrow {
+      color: #444;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ════════════════════════════════
+       PROFILE — edit here
+  ════════════════════════════════ -->
+  <div class="profile">
+    <!-- Option A: use a real photo — replace src with your image path or URL -->
+    <img class="profile-photo" src="headshot.jpg" alt="Profile photo"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+    <!-- Fallback initials shown if photo fails to load -->
+    <div class="profile-photo-placeholder" style="display:none;">👤</div>
+
+    <div class="profile-name">Sarah Friend</div>
+    <div class="profile-desc">Artist, researcher, and software developer exploring networked systems and protocol design</div>
+  </div>
+
+  <!-- ════════════════════════════════
+       LINKS — copy/paste a .link-card
+       block for each link you want
+  ════════════════════════════════ -->
+
+  <a class="link-card" href="https://nageldraxler.sumupstore.com/product/prompt-baby-blindbox">
+    <img class="link-thumb" src="prompt-baby-blindbox.png" alt="Prompt Baby Blindbox"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+    <div class="link-thumb-placeholder" style="display:none;">📦</div>
+    <div class="link-text">
+      <div class="link-title">Prompt Baby Blindbox</div>
+      <div class="link-desc">Limited edition physical card collectible — €125</div>
+    </div>
+    <div class="link-arrow">›</div>
+  </a>
+
+  <a class="link-card" href="https://isthisa.com/">
+    <img class="link-thumb" src="isthisa-headshot.jpg" alt="isthisa.com"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+    <div class="link-thumb-placeholder" style="display:none;">🌐</div>
+    <div class="link-text">
+      <div class="link-title">Website</div>
+      <div class="link-desc">isthisa.com</div>
+    </div>
+    <div class="link-arrow">›</div>
+  </a>
+
+  <a class="link-card" href="https://isthisanart.substack.com/">
+    <img class="link-thumb" src="substack-logo.png" alt="Mud and Dust"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+    <div class="link-thumb-placeholder" style="display:none;">📬</div>
+    <div class="link-text">
+      <div class="link-title">Mud and Dust</div>
+      <div class="link-desc">Monthly essays about technology delivered via Substack</div>
+    </div>
+    <div class="link-arrow">›</div>
+  </a>
+
+  <a class="link-card" href="https://buttondown.com/isthisa">
+    <img class="link-thumb" src="buttondown-logo.png" alt="SETI over SMTP"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+    <div class="link-thumb-placeholder" style="display:none;">📨</div>
+    <div class="link-text">
+      <div class="link-title">Newsletter</div>
+      <div class="link-desc">Quarterly email updates about projects and artworks</div>
+    </div>
+    <div class="link-arrow">›</div>
+  </a>
+
+</div>
+</body>
+</html>
